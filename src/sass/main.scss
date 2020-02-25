@@ -1,6 +1,23 @@
 /*
  * Все паршалы импортировать в этот файл
  */
+@import './helpers/fonts.scss';
+@import './normalize.scss';
+@import './helpers/variables.scss';
+@import './base.scss';
+@import './components/container.scss';
 
-@import 'normalize.scss';
-@import 'base.scss';
+// COMPONENTS
+
+@import './components/certificate.scss';
+@import './components/directions.scss';
+@import './components/feed.scss';
+@import './components/footer.scss';
+@import './components/format.scss';
+@import './components/header.scss';
+@import './components/parts.scss';
+@import './components/proposition.scss';
+@import './components/teachers.scss';
+@import './components/test.scss';
+@import './components/testimonials.scss';
+
