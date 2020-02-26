@@ -1,11 +1,15 @@
 html {
   box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 *,
 *::before,
 *::after {
   box-sizing: inherit;
+  padding: 0;
+  margin: 0;
 }
 
 body {
@@ -13,3 +17,57 @@ body {
     Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
+ul,
+ol {
+  list-style: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+a {
+  display: block;
+  text-decoration: none;
+}
+
+// SECTION TITLE PSEUDO BRACETS
+.section__title {
+  font-family: $secondary-font;
+  color: $primary-font-color;
+  font-size: 15px;
+  line-height: 20px;
+  letter-spacing: 0.9px;
+  text-transform: uppercase;
+  font-weight: 700;
+  text-align: center;
+
+  &::before {
+    content: '[';
+    color: $accent-font-color;
+  }
+
+  &::after {
+    content: ']';
+    color: $accent-font-color;
+  }
+
+  @media screen and (min-width: 768px) {
+    font-size: 20px;
+  }
+
+  @media screen and (min-width: 1420px) {
+    font-size: 30px;
+  }
+}

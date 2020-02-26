@@ -1,13 +1,14 @@
-.container{
-  min-width: 290px;
-}
+.container {
+  width: 290px;
+  margin: 0 auto;
 
-//MEDIA
-// TABLET
-@media screen and (min-width: 768px){
-  width: 710px;
-}
-// DESKTOP
-@media screen and (min-width: 1420px){
-  width: 1420px;
+  //MEDIA
+  // TABLET
+  @media screen and (min-width: 768px) {
+    width: 710px;
+  }
+  // DESKTOP
+  @media screen and (min-width: 1420px) {
+    width: 1420px;
+  }
 }
