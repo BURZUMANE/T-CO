@@ -1,0 +1,283 @@
+.section-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.test {
+  background-image: url(../images/test-bg-small.png);
+  background-repeat: no-repeat;
+  background-position: top;
+  background-size: cover;
+  text-align: center;
+  color: $secondary-font-color;
+  font-family: $primary-font;
+  font-size: 16px;
+  font-weight: 700;
+  padding: 48px;
+
+  @media screen and (min-width: 1420px) {
+    background-image: url(../images/test-bg.png);
+    padding: 116px 0 110px 0;
+    font-size: 30px;
+    line-height: 40px;
+    text-align: left;
+  }
+
+  &__description {
+    margin-bottom: 22px;
+    letter-spacing: 0.96px;
+    @media screen and (min-width: 1420px) {
+      margin-bottom: 65px;
+      width: 776px;
+      text-align: center;
+    }
+
+    &::before {
+      content: '';
+      display: block;
+      margin: 0 auto;
+      height: 57px;
+      width: 57px;
+      background-image: url(../images/icon-sputnik.png);
+      background-repeat: no-repeat;
+      background-size: cover;
+      @media screen and (min-width: 768px) {
+        height: 72px;
+        width: 72px;
+      }
+
+      @media screen and (min-width: 1420px) {
+        height: 90px;
+        width: 90px;
+      }
+    }
+  }
+
+  &__question-description {
+    @media screen and (min-width: 1420px) {
+      width: 308px;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      padding-right: 20px;
+    }
+  }
+
+  &__content {
+    background: #fff;
+    padding: 32px 28px;
+    color: $third-font-color;
+    font-size: 14px;
+    box-shadow: 0px 8px 40px 0px rgba(1, 1, 0, 0.08);
+    @media screen and (min-width: 768px) {
+      text-align: left;
+    }
+    @media screen and (min-width: 1420px) {
+      display: flex;
+      justify-content: space-around;
+      padding-top: 116px;
+      padding-bottom: 120px;
+    }
+  }
+
+  &__about {
+    padding-top: 18px;
+    text-align: left;
+    line-height: 1.7;
+    margin-bottom: 24px;
+    @media screen and (max-width: 1419px) {
+      padding-top: 42px;
+    }
+    @media screen and (max-width: 768px) {
+      margin-bottom: 40px;
+    }
+    @media screen and (min-width: 1420px) {
+      padding-top: 42px 0;
+      padding-bottom: 0;
+    }
+  }
+
+  &__form {
+    &-nav {
+      margin: 32px auto;
+      width: 128px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      
+      @media screen and (min-width: 1420px) {
+        margin: 0;
+      }
+
+      &_mobile {
+        @media screen and (min-width: 768px) {
+          display: none;
+        }
+      }
+
+      &-written{
+        color: $third-font-color;
+        vertical-align: top;
+        line-height: 22px;
+      }
+
+      &_tablet{
+        display: none;
+        @media only screen 
+          and (min-width : 768px) 
+          and (max-width : 1419px) {
+          display: flex;
+          justify-content: flex-start;
+          align-items: center;
+        }
+      }
+
+      &_desktop-upper {
+        display: none;
+        @media screen and (min-width: 1420px) {
+          display: flex;
+          justify-content: flex-end;
+        }
+      }
+
+      &_desktop {
+        display: none;
+        @media screen and (min-width: 1420px) {
+          display: flex;
+          justify-content: space-between;
+        }
+      }
+    }
+
+    &-nav-item {
+      letter-spacing: 1.7px;
+      line-height: 1.2;
+
+      &_active {
+        color: $accent-font-color;
+      }
+    }
+    @media screen and (min-width: 1420px) {
+      display: flex;
+      width: 795px;
+      justify-content: space-around;
+    }
+
+    &-question {
+      @media screen and (min-width: 1420px) {
+        width: 308px;
+      }
+
+      &-heading-wrapper {
+        display: flex;
+        justify-content: center; 
+        align-items: center;   
+        @media screen and (min-width: 768px) {
+          justify-content: flex-start;
+        }
+        @media screen and (min-width: 1240px) {
+          justify-content: space-between;
+          margin-bottom: 58px;
+        }
+      }
+
+      &-heading {
+        color: $secondary-accent-color;
+        line-height: 1;
+        @media screen and (max-width: 767px) {
+          margin-bottom: 24px;
+          color: $accent-font-color;
+        }
+        @media screen 
+          and (min-width: 768px) 
+          and (max-width: 1419px) 
+        {
+          padding-right: 58px;
+        }
+        // @media screen and (min-width: 768px) {
+        //   margin-bottom: 36px;
+        // }
+        @media screen and (min-width: 1420px) {
+          margin-bottom: 0;
+        }
+      }
+
+      &-content {
+        color: $secondary-accent-color;
+        line-height: 27px;
+        margin-bottom: 33px;
+      }
+    }
+
+    &-answers {
+      display: flex;
+      flex-direction: column;
+      @media screen and (min-width: 1420px) {
+        flex-direction: row;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        width: 405px;
+      }
+
+      &-item {
+        width: 165px;
+
+        @media (max-width: 1419px) {
+          &:not(:last-child) {
+            margin-bottom: 46px;
+          }
+        }
+        @media screen and (min-width: 1420px) {
+          &:not(:nth-last-child(-n + 2)) {
+            margin-bottom: 46px;
+          }
+        }
+      }
+    }
+
+    &-input {
+      display: none;
+
+      &:checked + .test__form-label {
+        &::before {
+          background: $accent-font-color;
+        }
+      }
+    }
+
+    &-label {
+      display: flex;
+      margin-bottom: 10px;
+      font-size: 15px;
+      line-height: 15px;
+      color: #fcbf2c;
+      align-items: center;
+      margin-bottom: 12px;
+      @media screen and (min-width: 1420px) {
+        width: 165px;
+      }
+
+      &::before {
+        box-sizing: content-box;
+        content: '';
+        display: block;
+        border: 3px solid $secondary-font-color;
+        outline: 2px solid $accent-font-color;
+        width: 10px;
+        height: 10px;
+        margin-right: 8px;
+      }
+    }
+
+    &-label-question {
+      text-align: left;
+      font-size: 16px;
+      font-weight: 500;
+    }
+  }
+}
+
+.arrow {
+  fill: $third-font-color;
+}
