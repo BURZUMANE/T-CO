@@ -98,6 +98,7 @@
     display: inline-block;
     font-size: 0;
   }
+  
   &_mobile {
     @media screen and (min-width: 768px) {
       display: none;

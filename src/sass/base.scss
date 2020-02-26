@@ -14,26 +14,23 @@ body {
   font-family: $primary-font, Arial, Helvetica, sans-serif;
 }
 
-ul,ol{
+ul,
+ol {
   list-style: none;
 }
 
-img{
+img {
   display: block;
   max-width: 100%;
   height: auto;
 }
 
-a{
+a {
   display: block;
   text-decoration: none;
 }
-
-button{
-  cursor: pointer;
-}
-// SECTION TITLE PSEUDO BRACETS 
-.section__title{
+// SECTION TITLE PSEUDO BRACETS
+.section__title {
   font-family: $secondary-font;
   color: $primary-font-color;
   font-size: 15px;
@@ -43,16 +40,15 @@ button{
   font-weight: 700;
   text-align: center;
 
-  &::before{
+  &::before {
     content: '[';
     color: $accent-font-color;
   }
 
-  &::after{
+  &::after {
     content: ']';
     color: $accent-font-color;
-  }  
-
+  }
   @media screen and (min-width: 768px) {
     font-size: 20px;
     line-height: 45px;
