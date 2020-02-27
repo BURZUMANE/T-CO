@@ -14,7 +14,7 @@
   font-family: $primary-font;
   font-size: 16px;
   font-weight: 700;
-  padding: 48px;
+  padding: 48px 0;
 
   @media screen and (min-width: 1420px) {
     background-image: url(../images/test-bg.png);
@@ -156,6 +156,14 @@
 
       &_active {
         color: $accent-font-color;
+      }
+
+      &:hover .test__form-nav-written{
+        color: $accent-font-color;
+      }
+
+      &:hover .arrow{
+        fill: $accent-font-color;
       }
     }
     @media screen and (min-width: 1420px) {
