@@ -12,13 +12,10 @@
   background-repeat: no-repeat;
   background-position: center top 48px;
   background-size: auto;
+
+  
 }
 
-.directions__image {
-  display: flex;
-  justify-content: center;
-  margin: 0 auto 28px;
-}
 
 .directions__title {
   width: 206px;
@@ -260,5 +257,9 @@
 
   .list__directions-team:nth-child(4) {
     background: #f4f9fe;
+  }
+
+  .list__directions-team{
+    width: 340px;
   }
 }
