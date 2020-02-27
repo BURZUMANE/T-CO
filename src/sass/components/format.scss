@@ -1,8 +1,23 @@
 .format {
-  background-image: url(../images/format/sputnik.png),
-    url(../images/format/format-bg.png);
+  // padding-bottom: 26px;
+  background-image: url(../images/format/sputnik.png), url(../images/format/format-bg.png);
   background-repeat: no-repeat;
-  background-position: right bottom, center bottom;
+  background-position: right -100px bottom, center bottom 20px;
+  background-size: 50%, 140% 82%;
+  @media screen and (min-width: 768px) {
+    background-image: url(../images/format/sputnik.png),
+      url(../images/format/format-bg.png);
+    background-repeat: no-repeat;
+    background-position: right -70px bottom 20px, center top 120px;
+    background-size: 50%, cover;
+  }
+  @media screen and (min-width: 1420px) {
+    background-image: url(../images/format/sputnik.png),
+      url(../images/format/format-bg.png);
+    background-repeat: no-repeat;
+    background-position: right bottom, center top;
+    background-size: auto;
+  }  
 
   .container {
     @media screen and (min-width: 768px) {
@@ -14,22 +29,88 @@
   }
 
   .section__title {
+    padding-top: 24px;
+    margin-bottom: 56px;
+    @media screen and (min-width: 768px) {
+      padding-top: 44px;
+      margin-bottom: 80px;
+    }
     @media screen and (min-width: 1420px) {
       text-align: left;
+      padding-top: 124px;
+      margin-bottom: 84px;
     }
   }
 
   &__list {
+    padding-bottom: 65px;
+    @media screen and (min-width: 768px) {
+      padding-bottom: 54px;
+    } 
+    @media screen and (min-width: 1420px) {
+      padding-bottom: 108px;
+    }     
+
     &-item {
+      &:not(:last-child) {
+        margin-bottom: 32px;
+        @media screen and (min-width: 768px) {
+          margin-bottom: 42px;
+        }        
+      }    
+
+      &:first-child .format__list-item-title::before {
+        background-image: url(../images/format/star1.png);
+      }
+
+      &:nth-child(2) .format__list-item-title::before {
+        background-image: url(../images/format/star2.png);
+      }      
+
+      &:last-child .format__list-item-title::before {
+        background-image: url(../images/format/star3.png);
+      }
+
       &-title {
+        font-size: 20px;
+        line-height: 30px;
+        font-weight: 700;
+        letter-spacing: 0.6px;
+        color: $primary-font-color;
+        margin-bottom: 12px;
+        
+        &::before {
+          content: "";
+          display: inline-block;
+          width: 18px;
+          height: 17px;
+          margin-right: 20px;
+          background-size: cover;
+        }
+        @media screen and (min-width: 768px) {
+          font-size: 25px;
+          line-height: 1.2;
+          margin-bottom: 16px;
+        }
+        @media screen and (min-width: 1420px) {
+          font-size: 30px;
+        }
       }
 
       &-description {
+        padding-left: 38px;
         font-size: 14px;
         line-height: 24px;
         font-weight: 400;
         letter-spacing: 0.4px;
         color: $third-font-color;
+
+        &-span {
+          display: block;
+          @media screen and (min-width: 768px) {
+            display: inline;
+          }
+        }
 
         @media screen and (min-width: 768px) {
           font-size: 16px;
