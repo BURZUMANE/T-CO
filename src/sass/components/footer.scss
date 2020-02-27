@@ -13,10 +13,30 @@
 }
 
 .footer-wrapper {
+  position: relative;
   display: flex;
   justify-content: space-between;
+
+  @media screen and (min-width: 1420px) {
+    margin-bottom: 20px;
+  }
   @media screen and (min-width: 1420px) {
     width: 900px;
+  }
+
+  &::after{
+    @media screen and(min-width:768px) and (max-width:1419px){
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      content: "";
+      height: 175px;
+      width: 157px;
+      background-image: url("../images/rocket.png");
+      background-size: contain;
+      background-repeat: no-repeat;
+    }
+
   }
 }
 
