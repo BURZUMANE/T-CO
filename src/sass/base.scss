@@ -13,3 +13,32 @@ body {
     Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
+// SECTION TITLE PSEUDO BRACETS
+.section__title {
+  font-family: $secondary-font;
+  color: $primary-font-color;
+  font-size: 15px;
+  line-height: 20px;
+  letter-spacing: 0.9px;
+  text-transform: uppercase;
+  font-weight: 700;
+  text-align: center;
+
+  &::before {
+    content: '[';
+    color: $accent-font-color;
+  }
+  
+  &::after {
+    content: ']';
+    color: $accent-font-color;
+  }
+
+  @media screen and (min-width: 768px) {
+    font-size: 20px;
+  }
+
+  @media screen and (min-width: 1420px) {
+    font-size: 30px;
+  }
+}
