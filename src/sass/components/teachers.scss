@@ -80,11 +80,14 @@
     margin: 0 auto;
     overflow-x: hidden;
     padding-bottom: 32px;
+    box-shadow: 0px 10px 30px 0px rgba(2, 2, 1, 0.07);
     @media screen and (min-width: 768px) {
+      box-shadow: none;
       justify-content: center;
       width: 100%;
     }
     @media screen and (min-width: 1420px) {
+      overflow-x: unset;
       width: 1220px;
       justify-content: space-between;
     }    
@@ -92,10 +95,11 @@
     &-item {
       flex-shrink: 0;
       width: 290px;
-      box-shadow: 0px 10px 30px 0px rgba(2, 2, 1, 0.07);
+      // box-shadow: 0px 10px 30px 0px rgba(2, 2, 1, 0.07);
     
       @media screen and (min-width: 768px) {
         width: 380px;
+        box-shadow: 0px 10px 30px 0px rgba(2, 2, 1, 0.07);
       }
 
       &:first-child {
