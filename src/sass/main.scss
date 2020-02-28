@@ -1,6 +1,10 @@
 /*
  * Все паршалы импортировать в этот файл
  */
+//  owl carousel
+@import './owl.carousel.scss';
+@import './owl.theme.default.scss';
+
 @import './helpers/fonts.scss';
 @import './normalize.scss';
 @import './helpers/variables.scss';

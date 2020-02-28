@@ -1,14 +1,104 @@
+// .footer {
+//   padding-top: 125px;
+//   padding-bottom: 40px;
+//   background-image: url(../images/footer-bg.png);
+//   background-repeat: no-repeat;
+//   background-size: auto, cover;
+//   background-position: right bottom, center;
+//   line-height: 24px;
+//   @media screen and (min-width:1420px){
+//     padding-top: 300px;
+//     background-image: url(../images/rocket-bg.png), url(../images/footer-bg.png);
+//   }
+// }
+
+@keyframes rocket {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  5% {
+    transform: rotate(10deg);
+  }
+
+  10% {
+    transform: rotate(0deg);
+  }
+
+  15% {
+    transform: rotate(-10deg);
+  }
+
+  20% {
+    transform: rotate(0deg);
+  }
+
+  25% {
+    transform: rotate(0deg);
+  }
+
+  30% {
+    transform: rotate(10deg);
+  }
+
+  35% {
+    transform: rotate(0deg);
+  }
+
+  40% {
+    transform: rotate(-10deg);
+  }
+
+  45% {
+    transform: rotate(0deg);
+  }
+
+  50% {
+    transform: translateY(-50px);
+  }
+
+  75% {
+    transform: translateY(-100px);
+  }
+
+  85% {
+    transform: translateY(-200px);
+  }
+  
+  100% {
+    transform: translateY(-10000px);
+  }
+}
+
 .footer {
+  position: relative;
   padding-top: 125px;
   padding-bottom: 40px;
   background-image: url(../images/footer-bg.png);
   background-repeat: no-repeat;
-  background-size: auto, cover;
-  background-position: right bottom, center;
+  background-size: cover;
+  background-position: center;
   line-height: 24px;
-  @media screen and (min-width:1420px){
+  @media screen and (min-width: 1420px) {
     padding-top: 300px;
-    background-image: url(../images/rocket-bg.png), url(../images/footer-bg.png);
+    background-image: url(../images/footer-bg.png);
+  }
+
+  @media screen and (min-width: 1420px) {
+    &::after {
+      position: absolute;
+      content: '';
+      right: 10%;
+      bottom: 10%;
+      background-image: url(../images/rocket-bg.png);
+      background-repeat: no-repeat;
+      height: 501px;
+      width: 312px;
+    }
+
+    &:hover::after {
+      animation: rocket 2s forwards;
+    }
   }
 }
 
@@ -24,19 +114,18 @@
     width: 900px;
   }
 
-  &::after{
-    @media screen and(min-width:768px) and (max-width:1419px){
+  &::after {
+    @media screen and(min-width:768px) and (max-width: 1419px) {
       position: absolute;
       right: 0;
       bottom: 0;
-      content: "";
+      content: '';
       height: 175px;
       width: 157px;
-      background-image: url("../images/rocket.png");
+      background-image: url('../images/rocket.png');
       background-size: contain;
       background-repeat: no-repeat;
     }
-
   }
 }
 
@@ -64,7 +153,7 @@
     }
     @media screen and (min-width: 1420px) {
       width: 500px;
-      
+
       &:last-child {
         width: min-content;
       }
@@ -106,7 +195,7 @@
 
 .footer-link {
   color: $third-font-color;
-  @media screen and(max-width:767px){
+  @media screen and(max-width:767px) {
     text-align: center;
   }
 }
@@ -207,7 +296,7 @@
     display: inline-block;
     font-size: 0;
   }
-  
+
   &_mobile {
     @media screen and (min-width: 768px) {
       display: none;
