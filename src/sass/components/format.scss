@@ -72,11 +72,12 @@
       }
 
       &-title {
-        font-size: 20px;
-        line-height: 30px;
-        font-weight: 700;
+        @include font-sets(20px,30px,$primary-font-color,700);
+        // font-size: 20px;
+        // line-height: 30px;
+        // font-weight: 700;
         letter-spacing: 0.6px;
-        color: $primary-font-color;
+        // color: $primary-font-color;
         margin-bottom: 12px;
         
         &::before {
@@ -96,14 +97,15 @@
           font-size: 30px;
         }
       }
-
+      
       &-description {
+        @include font-sets(14px,24px,$third-font-color,400);
         padding-left: 38px;
-        font-size: 14px;
-        line-height: 24px;
-        font-weight: 400;
+        // font-size: 14px;
+        // line-height: 24px;
+        // font-weight: 400;
+        // color: $third-font-color;
         letter-spacing: 0.4px;
-        color: $third-font-color;
 
         &-span {
           display: block;

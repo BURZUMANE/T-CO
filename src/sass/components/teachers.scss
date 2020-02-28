@@ -141,12 +141,13 @@
         top: -18px;
         width: 220px;
         height: 35px;
-        font-size: 16px;
+        @include font-sets(16px, 35px, $secondary-font-color, 700);
+        // font-size: 16px;
         font-family: $primary-font;
-        color: $secondary-font-color;
-        font-weight: bold;
+        // color: $secondary-font-color;
+        // font-weight: bold;
         text-transform: uppercase;
-        line-height: 35px;
+        // line-height: 35px;
         text-align: center;
         background-color: #5f7cec;
         box-shadow: 8px 13px 24px 0px rgba(90, 118, 233, 0.12);
