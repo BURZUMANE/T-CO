@@ -2,13 +2,14 @@
   margin-bottom: 82px;
 
   &__title {
+    @include font-sets (30px, 1.2, #e8e8f2, 900);
     margin-bottom: 14px;
-    font-family: 'HelveticaNeueCyr';
-    font-weight: 900;
-    font-size: 30px;
-    line-height: 1.2;
+    font-family: $primary-font;
+    // font-weight: 900;
+    // font-size: 30px;
+    // line-height: 1.2;
     letter-spacing: 0.9px;
-    color: #e8e8f2;
+    // color: #e8e8f2;
   }
 }
 
@@ -23,22 +24,24 @@
 
 .list-container {
   &__name {
+    @include font-sets (20px, 1.2, #edc65a, 400);
     margin-bottom: 4px;
-    font-family: 'Mistral';
-    font-weight: 400;
-    font-size: 20px;
-    line-height: 1.2;
-    color: #edc65a;
+    font-family: $accent-font;
+    // font-weight: 400;
+    // font-size: 20px;
+    // line-height: 1.2;
+    // color: #edc65a;
   }
 
   &__text {
+    @include font-sets (16px, 30px, $primary-font-color, 400);
     width: 214px;
     font-family: $primary-font;
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 30px;
+    // font-weight: 400;
+    // font-size: 16px;
+    // line-height: 30px;
     letter-spacing: 0.5px;
-    color: #2c2c2c;
+    // color: #2c2c2c;
     margin: 0 auto;
   }
 }
@@ -89,11 +92,16 @@
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
+
+      &:hover .image-container {
+        transform: scale(1.2);
+      }
     }
   }
 
   .image-container {
     margin-right: 26px;
+    transition: transform 0.3s linear;
   }
 
   .list-container {
