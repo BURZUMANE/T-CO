@@ -1,0 +1,176 @@
+.parts {
+  padding-top: 50px;
+  padding-bottom: 24px;
+  @media screen and (min-width: 768px) {
+    padding-top: 76px;
+    padding-bottom: 44px;
+  }
+  @media screen and (min-width: 1420px) {
+    padding-top: 126px;
+  }
+
+  .section__title {
+    margin-bottom: 24px;
+    @media screen and (min-width: 768px) {
+      margin-bottom: 38px;
+    }
+    @media screen and (min-width: 1420px) {
+      margin-bottom: 70px;
+    }
+  }
+
+  &__list {
+    counter-reset: count-title;
+    margin-bottom: 42px;
+    @media screen and (min-width: 768px) {
+      margin-bottom: 54px;
+    }
+    @media screen and (min-width: 1420px) {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 114px;
+    }
+
+    &-item {
+      @media screen and (max-width: 1419px) {
+        &:not(:last-child) {
+          margin-bottom: 20px;           
+        }
+      }
+      @media screen and (min-width: 1420px) {
+        width: 420px;
+      }
+
+      &::before {
+        display: block;
+        content: '';
+        height: 142px;
+        margin-bottom: 26px;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: contain;
+        @media screen and (min-width: 768px) {
+          margin-bottom: 34px;
+        }
+        @media screen and (min-width: 1420px) {
+          margin-bottom: 46px;
+        }        
+      }
+
+      &:nth-child(1)::before {
+        background-image: url(../images/parts/parts1.png);
+      }
+
+      &:nth-child(2)::before {
+        background-image: url(../images/parts/parts2.png);
+      }
+
+      &:last-child::before {
+        background-image: url(../images/parts/parts3.png);
+      }
+
+      &:nth-child(1) .parts__list-item-title::before {
+        color: rgb(199, 0, 124);
+      }
+
+      &:nth-child(2) .parts__list-item-title::before {
+        color: rgb(238, 193, 77);
+      }
+
+      &:last-child .parts__list-item-title::before {
+        color: rgb(95, 124, 236);
+      }
+
+      &-title {
+        @include font-sets(20px,25px,$primary-font-color,700);
+        // font-size: 20px;
+        // line-height: 25px;
+        // font-weight: 700;
+        // color: $primary-font-color;
+        letter-spacing: 0.6px;
+        counter-increment: count-title;
+        margin-bottom: 14px;
+        
+        @media screen and (min-width: 768px) {
+          font-size: 25px;
+          line-height: 1.2;
+          margin-bottom: 26px;
+        }
+        @media screen and (min-width: 1420px) {
+          font-size: 30px;
+        }
+        
+        &::before {
+          display: inline-block;
+          content: counter(count-title) '.';
+        }
+      }
+      
+      &-description {
+        @include font-sets(14px,24px,$third-font-color,400);
+        // font-size: 14px;
+        // line-height: 24px;
+        // font-weight: 400;
+        // color: $third-font-color;
+        letter-spacing: 0.4px;
+        
+        @media screen and (min-width: 768px) {
+          font-size: 16px;
+          line-height: 30px;
+        }
+        
+        &_bld {
+          font-weight: 700;
+          color: $primary-font-color;
+        }
+      }
+    }
+  }
+  
+  &__btn {
+    @include font-sets(13px,1.2,$secondary-font-color,700);
+    display: block;
+    margin: 0 auto;
+    width: 270px;
+    height: 54px;
+    border: none;
+    border-radius: 27px;
+    // font-weight: bold;
+    // font-size: 13px;
+    // line-height: 1.2;
+    // color: $secondary-font-color;
+    font-family: $primary-font;
+    text-align: center;
+    background-color: rgb(254, 194, 64);
+    box-shadow: 0px 13px 17.1px 0.9px rgba(238, 193, 77, 0.4);
+    cursor: pointer;
+
+    @media screen and (min-width: 768px) {
+      width: 400px;
+      font-size: 19px;
+      line-height: 1.2;     
+    }
+    
+    &:hover {
+      background-color: rgb(250, 184, 51);
+      box-shadow: 0px 13px 17.1px 0.9px rgba(250, 184, 51, 0.4);
+    }
+
+    &:active,
+    &:focus {  
+      outline: none;    
+      background-color: rgb(248, 170, 51);
+      box-shadow: 0px 13px 17.1px 0.9px rgba(248, 170, 51, 0.4);
+    }
+  }
+}
+
+// .section__title {
+//   margin-bottom: 24px;
+//   @media screen and (min-width: 768px) {
+//     margin-bottom: 38px;
+//   }
+//   @media screen and (min-width: 1420px) {
+//     margin-bottom: 70px;
+//   }
+// }

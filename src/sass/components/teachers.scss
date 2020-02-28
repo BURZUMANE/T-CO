@@ -1,0 +1,182 @@
+%skill-font {
+  padding-left: 16px;
+  font-size: 14px;
+  font-family: $primary-font;
+  font-weight: 400;
+  line-height: 30px;
+  letter-spacing: 0.42px;
+  color: $third-font-color;
+}
+
+.teachers {
+  padding-top: 52px;
+  margin-bottom: 24px;
+
+  &__slider {
+    position: relative;
+    width: 100%;
+
+    &-btn-container {
+      position: absolute;
+      top: 150px;
+      display: flex;
+      justify-content: space-between;
+      width: 294px;
+      left: 50%;
+      transform: translateX(-50%);
+      // width: 100%;
+      padding: 0 5px;
+      @media screen and (min-width: 768px) {
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 432px;
+      }
+      @media screen and (min-width: 1420px) {
+        width: 1270px;
+      }
+    }
+
+    &-control {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      border: 2px solid rgb(234, 234, 234);
+      background-color: $secondary-font-color;
+      box-shadow: 1.5px 2.598px 9px 0px rgba(2, 2, 1, 0.1);
+      cursor: pointer;
+
+      .ctrl-arrow {
+        width: 16px;
+        height: 16px;
+        vertical-align: middle;
+        fill: rgb(95, 124, 236);
+
+        &--active {
+          fill: rgb(95, 124, 236);
+        }
+      }
+    }
+  }
+
+  .section__title {
+    margin-bottom: 35px;
+    @media screen and (min-width: 768px) {
+      margin-bottom: 52px;
+      padding-top: 75px;
+    }
+    @media screen and (min-width: 1420px) {
+      margin-bottom: 82px;
+      padding-top: 122px;
+    }
+  }
+
+  &__list {
+    display: flex;
+    justify-content: space-between;
+    width: 290px;
+    margin: 0 auto;
+    overflow-x: hidden;
+    padding-bottom: 32px;
+    box-shadow: 0px 10px 30px 0px rgba(2, 2, 1, 0.07);
+    @media screen and (min-width: 768px) {
+      box-shadow: none;
+      justify-content: center;
+      width: 100%;
+    }
+    @media screen and (min-width: 1420px) {
+      overflow-x: unset;
+      width: 1220px;
+      justify-content: space-between;
+    }
+
+    &-item {
+      flex-shrink: 0;
+      width: 290px;
+      // box-shadow: 0px 10px 30px 0px rgba(2, 2, 1, 0.07);
+
+      @media screen and (min-width: 768px) {
+        margin: 0 auto;
+        min-height: 560px;
+        width: 380px;
+        box-shadow: 0px 10px 30px 0px rgba(2, 2, 1, 0.07);
+      }
+
+      // &:first-child {
+      //   @media screen and (min-width: 768px) {
+      //     order: 1;
+      //   }
+      //   @media screen and (min-width: 1420px) {
+      //     order: 0;
+      //   }
+      // }
+
+      // &:nth-child(2) {
+      //   @media screen and (min-width: 768px) {
+      //     order: 2;
+      //     transform: translateX(60px);
+      //   }
+      //   @media screen and (min-width: 1420px) {
+      //     order: 0;
+      //     transform: unset;
+      //   }
+      // }
+
+      // &:last-child {
+      //   @media screen and (min-width: 768px) {
+      //     transform: translateX(-60px);
+      //   }
+      //   @media screen and (min-width: 1420px) {
+      //     transform: unset;
+      //   }
+      // }
+
+      &-img {
+        width: 380px;
+      }
+      
+      &-name {
+        position: relative;
+        left: 26px;
+        top: -18px;
+        width: 220px;
+        height: 35px;
+        @include font-sets(16px, 35px, $secondary-font-color, 700);
+        // font-size: 16px;
+        font-family: $primary-font;
+        // color: $secondary-font-color;
+        // font-weight: bold;
+        text-transform: uppercase;
+        // line-height: 35px;
+        text-align: center;
+        background-color: #5f7cec;
+        box-shadow: 8px 13px 24px 0px rgba(90, 118, 233, 0.12);
+      }
+
+      &-skills {
+        margin-bottom: 10px;
+        @media screen and (min-width: 768px) {
+          margin-bottom: 15px;
+        }
+
+        &-desc {
+          @extend %skill-font;
+        }
+      }
+
+      &-description {
+        @extend %skill-font;
+        font-weight: 700;
+        padding-bottom: 20px;
+        @media screen and (min-width: 768px) {
+          padding-bottom: 40px;
+        }
+
+      }
+    }
+  }
+}
+
+.owl-stage{
+  min-height: 600px !important;
+}

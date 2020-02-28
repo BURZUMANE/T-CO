@@ -1,0 +1,316 @@
+// .footer {
+//   padding-top: 125px;
+//   padding-bottom: 40px;
+//   background-image: url(../images/footer-bg.png);
+//   background-repeat: no-repeat;
+//   background-size: auto, cover;
+//   background-position: right bottom, center;
+//   line-height: 24px;
+//   @media screen and (min-width:1420px){
+//     padding-top: 300px;
+//     background-image: url(../images/rocket-bg.png), url(../images/footer-bg.png);
+//   }
+// }
+
+@keyframes rocket {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  5% {
+    transform: rotate(10deg);
+  }
+
+  10% {
+    transform: rotate(0deg);
+  }
+
+  15% {
+    transform: rotate(-10deg);
+  }
+
+  20% {
+    transform: rotate(0deg);
+  }
+
+  25% {
+    transform: rotate(0deg);
+  }
+
+  30% {
+    transform: rotate(10deg);
+  }
+
+  35% {
+    transform: rotate(0deg);
+  }
+
+  40% {
+    transform: rotate(-10deg);
+  }
+
+  45% {
+    transform: rotate(0deg);
+  }
+
+  50% {
+    transform: translateY(-50px);
+  }
+
+  75% {
+    transform: translateY(-100px);
+  }
+
+  85% {
+    transform: translateY(-200px);
+  }
+  
+  100% {
+    transform: translateY(-10000px);
+  }
+}
+
+.footer {
+  position: relative;
+  padding-top: 125px;
+  padding-bottom: 40px;
+  background-image: url(../images/footer-bg.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  line-height: 24px;
+  @media screen and (min-width: 1420px) {
+    padding-top: 300px;
+    background-image: url(../images/footer-bg.png);
+  }
+
+  @media screen and (min-width: 1420px) {
+    &::after {
+      position: absolute;
+      content: '';
+      right: 10%;
+      bottom: 10%;
+      background-image: url(../images/rocket-bg.png);
+      background-repeat: no-repeat;
+      height: 501px;
+      width: 312px;
+    }
+
+    &:hover::after {
+      animation: rocket 2s forwards;
+    }
+  }
+}
+
+.footer-wrapper {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+
+  @media screen and (min-width: 1420px) {
+    margin-bottom: 20px;
+  }
+  @media screen and (min-width: 1420px) {
+    width: 900px;
+  }
+
+  &::after {
+    @media screen and(min-width:768px) and (max-width: 1419px) {
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      content: '';
+      height: 175px;
+      width: 157px;
+      background-image: url('../images/rocket.png');
+      background-size: contain;
+      background-repeat: no-repeat;
+    }
+  }
+}
+
+.footer-list {
+  text-align: center;
+  @media screen and (min-width: 768px) {
+    display: flex;
+    flex-wrap: wrap;
+    text-align: left;
+  }
+  @media screen and (min-width: 1420px) {
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  &__item {
+    display: block;
+    @media screen and (min-width: 768px) {
+      width: 445px;
+      display: flex;
+      justify-content: space-between;
+    }
+    @media screen and (min-width: 768px) {
+      width: 500px;
+    }
+    @media screen and (min-width: 1420px) {
+      width: 500px;
+
+      &:last-child {
+        width: min-content;
+      }
+    }
+  }
+}
+
+.rocket {
+  &_tablet {
+    display: none;
+
+    @media screen and (min-width: 768px) and (max-width: 1419px) {
+      display: block;
+    }
+  }
+
+  &_desktop {
+    display: none;
+    @media screen and (min-width: 1420px) {
+      display: block;
+    }
+  }
+
+  &::before {
+    content: '';
+    display: block;
+    width: 118px;
+    height: 188px;
+    background-image: url(../images/rocket.png);
+    background-position: top left;
+    background-size: cover;
+    @media screen and (min-width: 1420px) {
+      background-image: url(../images/rocket-bg.png);
+      width: 320px;
+      height: 502px;
+    }
+  }
+}
+
+.footer-link {
+  color: $third-font-color;
+  @media screen and(max-width:767px) {
+    text-align: center;
+  }
+}
+
+.logo {
+  margin-bottom: 22px;
+
+  &-img {
+    margin: 0 auto;
+    @media screen and (min-width: 768px) {
+      margin: 0;
+    }
+  }
+}
+
+.adress-list {
+  margin-bottom: 32px;
+  @media screen and (min-width: 768px) {
+    width: 270px;
+  }
+
+  &__item {
+    color: $third-font-color;
+  }
+}
+
+.contact-list {
+  margin-bottom: 32px;
+  @media screen and (min-width: 768px) {
+    width: 170px;
+  }
+}
+
+.apply-button {
+  background-image: linear-gradient(
+    180deg,
+    rgb(222, 71, 236) 0%,
+    rgb(117, 168, 249) 100%
+  );
+  border-radius: 55px;
+  border: none;
+  color: $secondary-font-color;
+  box-shadow: 5.5px 9.526px 16px 0px rgba(73, 119, 237, 0.23);
+  width: 270px;
+  height: 54px;
+
+  @media screen and (max-width: 767px) {
+    margin-bottom: 36px;
+  }
+
+  @media screen and (min-width: 768px) {
+    width: 240px;
+  }
+}
+
+.social {
+  margin: 0 auto;
+  display: flex;
+  width: 170px;
+  justify-content: space-between;
+
+  &_tablet {
+    @media screen and (min-width: 1420px) {
+      display: none;
+    }
+  }
+
+  &_desktop {
+    display: none;
+    @media screen and (min-width: 1420px) {
+      display: flex;
+    }
+  }
+
+  &_item-link {
+    content: '';
+    display: block;
+    height: 42px;
+    width: 42px;
+
+    &_tl {
+      background-image: url(../images/socials/telegram.png);
+    }
+
+    &_fb {
+      background-image: url(../images/socials/facebook.png);
+    }
+
+    &_yt {
+      background-image: url(../images/socials/youtube.png);
+    }
+  }
+}
+
+.rocket {
+  display: none;
+  @media screen and (min-width: 768px) {
+    display: inline-block;
+    font-size: 0;
+  }
+
+  &_mobile {
+    @media screen and (min-width: 768px) {
+      display: none;
+    }
+  }
+}
+
+.miscellaneous {
+  @media screen and (min-width: 768px) {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  @media screen and (min-width: 1420px) {
+    width: 900px;
+  }
+}

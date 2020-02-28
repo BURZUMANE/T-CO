@@ -1,0 +1,212 @@
+.head {
+  margin-bottom: 82px;
+
+  &__title {
+    @include font-sets (30px, 1.2, #e8e8f2, 900);
+    margin-bottom: 14px;
+    font-family: $primary-font;
+    // font-weight: 900;
+    // font-size: 30px;
+    // line-height: 1.2;
+    letter-spacing: 0.9px;
+    // color: #e8e8f2;
+  }
+}
+
+.image-container {
+  display: block;
+  margin-bottom: 16px;
+
+  &__img {
+    margin: 0 auto;
+  }
+}
+
+.list-container {
+  &__name {
+    @include font-sets (20px, 1.2, #edc65a, 400);
+    margin-bottom: 4px;
+    font-family: $accent-font;
+    // font-weight: 400;
+    // font-size: 20px;
+    // line-height: 1.2;
+    // color: #edc65a;
+  }
+
+  &__text {
+    @include font-sets (16px, 30px, $primary-font-color, 400);
+    width: 214px;
+    font-family: $primary-font;
+    // font-weight: 400;
+    // font-size: 16px;
+    // line-height: 30px;
+    letter-spacing: 0.5px;
+    // color: #2c2c2c;
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 767px) {
+  .testimonials {
+    background-image: url('../images/bg_section-2.png');
+    background-repeat: no-repeat;
+    background-position: center 110px;
+    background-size: cover;
+    text-align: center;
+    padding-top: 20px;
+    padding-bottom: 44px;
+  }
+}
+
+@media (min-width: 768px) {
+  .container_testimonials-list {
+    width: 600px;
+  }
+
+  .head {
+    margin-bottom: 142px;
+
+    &__title {
+      font-size: 60px;
+      letter-spacing: 1.8px;
+    }
+  }
+
+  .testimonials {
+    background-image: url('../images/bg_section-2_t.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    text-align: center;
+    background-position: center 210px;
+    padding-top: 68px;
+    padding-bottom: 90px;
+
+    &__team {
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+    }
+
+    &__list-item {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+
+      &:hover .image-container {
+        transform: scale(1.2);
+      }
+    }
+  }
+
+  .image-container {
+    margin-right: 26px;
+    transition: transform 0.3s linear;
+  }
+
+  .list-container {
+    width: 338px;
+    text-align: left;
+    display: flex;
+    flex-direction: column-reverse;
+
+    &__name {
+      padding-left: 26px;
+      font-size: 30px;
+      position: relative;
+
+      &::before {
+        display: block;
+        content: '';
+        margin: 0 auto;
+        background-image: url('../images/line.png');
+        border: 2px rgb(212, 221, 234);
+        width: 52px;
+        height: 30px;
+        position: absolute;
+        left: -12%;
+        top: -20%;
+      }
+    }
+
+    &__text {
+      margin: 0 0 42px 0;
+      width: 305px;
+      font-size: 23px;
+      line-height: 35px;
+      letter-spacing: 0.7px;
+    }
+  }
+}
+
+@media (min-width: 320px) and (max-width: 1419px) {
+  .testimonials__list-item:not(:last-child) {
+    margin-bottom: 30px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1419px) {
+  .testimonials__list-item:nth-child(3) {
+    order: 1;
+  }
+
+  .testimonials__list-item:nth-child(2) {
+    order: 2;
+  }
+
+  .testimonials__list-item:last-child {
+    order: 3;
+  }
+}
+
+@media (min-width: 1420px) {
+  .container_testimonials-list {
+    width: 1358px;
+  }
+
+  .testimonials {
+    background-image: url('../images/bg_section-2_d.png');
+    background-position: center bottom;
+    background-size: 100% auto;
+    padding-top: 34px;
+    padding-bottom: 132px;
+  }
+
+  .head {
+    margin-bottom: 90px;
+
+    &__title {
+      font-size: 90px;
+      letter-spacing: 2.7px;
+      margin-bottom: 56px;
+    }
+  }
+
+  .testimonials__team {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+
+  .testimonials__list-item {
+    width: 668px;
+  }
+
+  .testimonials__list-item:not(:nth-last-child(-n + 2)) {
+    margin-bottom: 72px;
+  }
+
+  .image-container {
+    margin-right: 60px;
+  }
+
+  .list-container__name {
+    font-size: 35px;
+  }
+
+  .list-container__text {
+    width: 331px;
+    font-size: 25px;
+    letter-spacing: 0.75px;
+  }
+}
