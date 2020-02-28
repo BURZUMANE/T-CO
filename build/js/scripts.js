@@ -35,6 +35,6 @@ $(document).ready(function () {
   sliderBtn.forEach(function (el) {
     el.classList.add('teachers__slider-control');
   });
-  btnContainer.firstChild.innerHTML = "<svg class=\"ctrl-arrow arrow-prev\">\n    <use href=\"../images/svg/symbol-defs.svg#arrow-left\"></use>\n  </svg>";
-  btnContainer.lastChild.innerHTML = "<svg class=\"ctrl-arrow ctrl-arrow--active arrow-next\">\n  <use href=\"../images/svg/symbol-defs.svg#arrow-right\"></use>\n</svg>";
+  btnContainer.firstChild.innerHTML = "<svg class=\"ctrl-arrow arrow-prev\">\n    <use href=\"./images/svg/symbol-defs.svg#arrow-left\"></use>\n  </svg>";
+  btnContainer.lastChild.innerHTML = "<svg class=\"ctrl-arrow ctrl-arrow--active arrow-next\">\n  <use href=\"./images/svg/symbol-defs.svg#arrow-right\"></use>\n</svg>";
 });
